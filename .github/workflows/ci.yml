@@ -1,6 +1,6 @@
 name: CI
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   build:
@@ -12,10 +12,8 @@ jobs:
       matrix:
         platform:
           - { name: Windows VS2019, os: windows-2019 }
-          - { name: Windows VS2022, os: windows-2022 }
-          - { name: Linux GCC, os: ubuntu-latest }
-          - { name: MacOS XCode, os: macos-latest }
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
+      - name: Hello
+        run: echo "hi"
+        shell: bash
